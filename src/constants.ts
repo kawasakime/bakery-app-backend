@@ -1,0 +1,1 @@
+export const imagesRoute = 'http://10.241.114.43:3001/images/'
