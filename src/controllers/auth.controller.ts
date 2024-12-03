@@ -20,6 +20,7 @@ export const authController = {
     } catch (error) { handleError(error, res) }
   },
   login: async (req: Request, res: Response) => {
+    console.log('LOGIN');
     try {
       console.log(req.body)
       const user = await AppDataSource.getRepository(User).findOneBy({

@@ -1,4 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
+import { OrderStatus } from "./enums/OrderStatus"
 
 @Entity()
 export class Order {
@@ -18,4 +19,9 @@ export class Order {
     @Column()
     clientName: string
 
+    @Column({
+        type: "varchar",
+        default: OrderStatus.WAITING
+    })
+    status: OrderStatus
 }
